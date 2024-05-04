@@ -85,4 +85,18 @@
             trackball-bindings = <&tmv_fine>;
         };
     };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        test {
+            if-layers = <3>;
+            then-layer = <5>;
+        };
+
+        ree {
+            if-layers = <3>;
+            then-layer = <2>;
+        };
+    };
 };
