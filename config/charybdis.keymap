@@ -1,8 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -30,7 +30,7 @@
 &kp TAB       &kp Q   &kp W   &kp E        &kp R             &kp T           &kp Y      &kp U      &kp I      &kp O    &kp P      &kp BACKSLASH
 &kp CAPSLOCK  &kp A   &kp S   &kp D        &kp F             &kp G           &kp H      &kp J      &kp K      &kp L    &kp SEMI   &kp APOS
 &kp LSHIFT    &kp Z   &kp X   &kp C        &kp V             &kp B           &kp N      &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
-                              &lt 1 SPACE  &kp SPACE         &kp LCTRL       &kp TILDE  &kp ENTER
+                              &lt 1 SPACE  &kp SPACE         &kp LCTRL       &kp MINUS  &kp ENTER
                                            &kp LEFT_COMMAND  &kp LEFT_ALT    &mkp MB1
             >;
 
@@ -39,12 +39,12 @@
 
         layer_1 {
             bindings = <
-&trans  &kp F1            &kp F2             &kp F3  &kp F4  &kt F5    &kp F6  &kp F7          &kp F8          &kp F9            &kp F10            &kp F11
-&trans  &trans    &trans             &trans  &trans  &trans    &trans  &trans          &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp F12
-&trans  &ext_power EP_ON  &ext_power EP_OFF  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT         &trans             &trans
-&trans  &trans            &trans             &trans  &trans  &trans    &trans  &trans          &trans          &trans            &trans             &trans
-                                             &trans  &trans  &trans    &trans  &trans
-                                                     &trans  &trans    &trans
+&kp GRAVE  &kp F1            &kp F2             &kp F3  &kp F4  &kt F5    &kp F6  &kp F7          &kp F8          &kp F9            &kp F10            &kp F11
+&trans     &trans            &trans             &trans  &trans  &trans    &trans  &trans          &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp F12
+&trans     &ext_power EP_ON  &ext_power EP_OFF  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT         &trans             &trans
+&trans     &trans            &trans             &trans  &trans  &trans    &trans  &trans          &trans          &trans            &trans             &trans
+                                                &trans  &trans  &trans    &trans  &trans
+                                                        &trans  &trans    &trans
             >;
         };
     };
